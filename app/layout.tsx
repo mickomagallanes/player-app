@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(roboto.className, "bg-[#f9f7f6] text-[#2E2E2E]")}>
-        <main className="container">{children}</main>
+        <main className="m-auto">{children}</main>
       </body>
     </html>
   );
