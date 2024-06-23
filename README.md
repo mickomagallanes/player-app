@@ -15,7 +15,7 @@ Before you begin, ensure you have met the following requirements:
 
 2. Navigate to the project directory:
    ```sh
-   cd basketball-player-stats-finder
+   cd player-app
 
 3. Install the repository
    ```sh
