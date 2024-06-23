@@ -21,6 +21,7 @@ export default function Card({
       <Image
         src={imageSrc ?? "/images/person-placeholder.svg"}
         alt={label}
+        className="max-h-full w-32"
         width={90}
         height={90}
       />

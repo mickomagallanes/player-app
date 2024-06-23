@@ -36,9 +36,7 @@ export default function MainPage({ initialData }: { initialData: Player[] }) {
               key={player.personId}
               link={`/${player.personId}`}
               label={player.nameFullLocal}
-              imageSrc={
-                player.images.length ? `${player.images[0].url}?size=400` : null
-              }
+              imageSrc={player.images.length ? `${player.images[0].url}` : null}
             />
           ))}
         {isLoading && <CardsSkeleton />}
