@@ -1,5 +1,5 @@
 # Basketball Player Stats Finder
-[[https://player-app-beryl.vercel.app/](https://player-app-micko-magallanes-projects.vercel.app/)](https://player-app-micko-magallanes-projects.vercel.app/)
+https://player-app-micko-magallanes-projects.vercel.app/
 
 ## Prerequisites
 
