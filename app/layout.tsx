@@ -9,14 +9,15 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Player App",
+  title: "Basketball Player Stats",
+  description: "Get stats of a player",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  userScalable: false,
+  userScalable: true,
 };
 
 export default function RootLayout({

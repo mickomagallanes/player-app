@@ -125,118 +125,10 @@ interface SeasonAPI {
   seasonId: string;
 }
 
-interface SeasonStats {
-  assists: number;
-  assistsDefensive: number;
-  assistsPerGame: number;
-  assistsTurnoverRatio: number;
-  blocks: number;
-  blocksPerGame: number;
-  blocksReceived: number;
-  blocksReceivedPerGame: number;
-  doubleDouble: number;
-  draws: number;
-  dunks: number;
-  dunksPerGame: number;
-  efficiency: number;
-  efficiencyCustom: number;
-  fieldGoalsAttempted: number;
-  fieldGoalsEffectivePercentage: number;
-  fieldGoalsMade: number;
-  fieldGoalsPercentage: number;
-  foulsCoachDisqualifying: number;
-  foulsCoachTechnical: number;
-  foulsDisqualifying: number;
-  foulsDrawn: number;
-  foulsDrawnPerGame: number;
-  foulsOffensive: number;
-  foulsPersonal: number;
-  foulsPersonalPerGame: number;
-  foulsTechnical: number;
-  foulsTotal: number;
-  foulsUnsportsmanlike: number;
-  freeThrowsAttempted: number;
-  freeThrowsAttemptedPerGame: number;
-  freeThrowsMade: number;
-  freeThrowsMadePerGame: number;
-  freeThrowsPercentage: number;
-  games: number;
-  gamesPercentage: number;
-  gamesStarted: number;
-  indexOfSuccess: number;
-  losses: number;
-  maxAssists: number;
-  maxFreeThrowsMade: number;
-  maxPoints: number;
-  maxPointsThreeMade: number;
-  maxPointsTwoMade: number;
-  maxRebounds: number;
-  maxReboundsDefensive: number;
-  maxReboundsOffensive: number;
-  maxSteals: number;
-  minus: number;
-  minutes: string;
-  minutesPerGame: string;
-  pir: number;
-  plus: number;
-  plusMinus: number;
-  points: number;
-  pointsFastBreak: number;
-  pointsFastBreakAttempted: number;
-  pointsFastBreakMade: number;
-  pointsFromTurnover: number;
-  pointsInThePaint: number;
-  pointsInThePaintAttempted: number;
-  pointsInThePaintMade: number;
-  pointsPerGame: number;
-  pointsSecondChance: number;
-  pointsSecondChanceAttempted: number;
-  pointsSecondChanceMade: number;
-  pointsThreeAttempted: number;
-  pointsThreeAttemptedPerGame: number;
-  pointsThreeMade: number;
-  pointsThreeMadePerGame: number;
-  pointsThreePercentage: number;
-  pointsTwoAttempted: number;
-  pointsTwoAttemptedPerGame: number;
-  pointsTwoMade: number;
-  pointsTwoMadePerGame: number;
-  pointsTwoPercentage: number;
-  powerPlayPoints: number | null;
-  powerPlayPointsAwarded: number | null;
-  rebounds: number;
-  reboundsDefensive: number;
-  reboundsDefensivePerGame: number;
-  reboundsOffensive: number;
-  reboundsOffensivePerGame: number;
-  reboundsPerGame: number;
-  steals: number;
-  stealsPerGame: number;
-  tripleDouble: number;
-  trueShootingAttempts: number | null;
-  trueShootingPercentage: number | null;
-  turnovers: number;
-  turnoversPerGame: number;
-  turnoversPercentage: number | null;
-  wins: number;
-}
+interface SeasonStats extends CareerStats {}
 
-interface SeasonTransformed {
-  id: string;
+interface SeasonTransformed extends CareerTransformed {
   team: string;
-  games: number;
-  pointsPerGame: number;
-  fieldGoalsMade: number;
-  fieldGoalsAttempted: number;
-  fieldGoalsPercentage: number;
-  freeThrowsMadePerGame: number;
-  freeThrowsAttemptedPerGame: number;
-  freeThrowsPercentage: number;
-  blocksPerGame: number;
-  stealsPerGame: number;
-  foulsPersonalPerGame: number;
-  reboundsPerGame: number;
-  assistsPerGame: number;
 }
 
 //   For Includes Season in Season Stats API
@@ -381,4 +273,31 @@ interface EntitySocial {
   facebook: string;
   instagram: string;
   website: string;
+}
+
+// types for Player
+interface PlayerImage extends EntityImage {}
+
+interface Player {
+  added: string;
+  deceased: string | null;
+  dob: string;
+  externalId: string;
+  gender: string;
+  historicalNames: string | null;
+  images: PlayerImage[];
+  languageLocal: string | null;
+  nameAbbreviated: string | null;
+  nameFamilyLatin: string | null;
+  nameFamilyLocal: string;
+  nameFullLatin: string | null;
+  nameFullLocal: string;
+  nameGivenLatin: string | null;
+  nameGivenLocal: string;
+  nationality: string;
+  organization: EntityOrganization;
+  organizationId: string;
+  personId: string;
+  status: string;
+  updated: string;
 }
